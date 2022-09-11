@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Pathway+Gothic+One&family=Sacramento&family=Source+Code+Pro&family=Varela+Round&display=swap');
+
+/* TO CENTER SOMETHING, PUT IT IN A DIV AND CENTER THE DIV */
+html,
+body {
+  overflow-x: initial !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  font-family: "IBM Plex Mono", monospace;
+  scroll-behavior: smooth;
+  background-color: #606c38;
+}
+
+/* Title  /  Header */
+.text-typing h1{ 
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 35px;
+    white-space: nowrap;
+    /* TYPING EFFECT */
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid white;
+    /* TYPING TEXT EFFECT */
+}
+
+/* SIMPLE WAY TO CENTER DIV */
+/* THIS CENTERS THE H1 TEXT */
+.text-typing{
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Animations for typing effect */
+  @keyframes typing{
+    from {max-width: 0}
+    to {max-width: 100%}
+  }
+  
+  @keyframes blink-caret{
+    from, to {border-color: transparent}
+    50% {border-color: rgb(252, 249, 249)}
+  }
+
+  /* Slogan */
+  .slogan-text p2{
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 30px;
+    position: relative;
+    width: max-content;
+    font-weight: bolder;
+  }
+
+  .slogan-text{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+/* CUSTOMIZABLE TYPE WRITER */
+:root {
+  --bg-color: #606c38;;
+  --typewriterSpeed: 2s;
+  --typewriterCharacters: 24;
+}
+
+p2::before,
+p2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+p2::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+p2::after {
+  width: 0.125em;
+  background: white;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+  
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  /* Intro text */
+.intro-text{
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 17px;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    /* WITHOUT THIS, THE TEXT WILL BE LONG AND IT WILL SPREAD FROM SIDE TO SIDE
+    SO PUT IT IN DIV AND CHANGE THE WIDTH IS U WANNA CENTER IT LIKE THIS.  */
+    width: 50%;
+}
+
+
+  /* ------------IMAGE-------------- */
+/* IMAGE */
+img{
+    border-radius: 100px;
+    margin-top: 35px;
+    margin-bottom: -60px;
+    width: 280px;
+    /* TO CENTER IMAGE, MAKE IT A BLOCK ELEMENTS (DONT PUT IN DIV) AND ADD THESE 3 */
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* BUTTON */
+button{
+    cursor: pointer; 
+    background: #fdfdfd;
+    color: #606c38;;
+    font-size: 20px;
+    padding: 8px 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 600;
+    border-radius: 86px;
+    border: 3px solid #fdfdfd;
+    margin: 0 auto;
+    font-family: 'Varela Round', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    border: 3px solid white;
+    font-size: 22px;
+    background: none;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: rgba(80, 75, 109, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+
+/* 4 tiny circles */
+#dot-1{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+  .dot {
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  span:hover{
+    background-color: white;
+    cursor: pointer;
+  }
+  .scroll{
+    text-align: center;
+    margin-top: 20px;
+  }
+
